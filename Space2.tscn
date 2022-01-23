@@ -1,11 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Space Backgrounds 2 Files/png/Purple Nebula/back.png" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Star.tscn" type="PackedScene" id=3]
 [ext_resource path="res://last_star_space.gd" type="Script" id=4]
+[ext_resource path="res://assets/music/space 2 - start - 22:01:2022 11.07.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/music/space 2 - star 1 - 22:01:2022 11.09.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/music/space 2 - star 2 - 22:01:2022 11.11.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/music/space 2 - star 3 - 22:01:2022 11.13.wav" type="AudioStream" id=8]
+[ext_resource path="res://level.gd" type="Script" id=9]
 
 [node name="Space2" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 168, 1656 )
@@ -19,12 +25,30 @@ position = Vector2( 200, 400 )
 [node name="Star" parent="." instance=ExtResource( 3 )]
 position = Vector2( 104, 1440 )
 
+[node name="AudioStreamPlayer" parent="Star" index="2"]
+stream = ExtResource( 6 )
+
 [node name="Star2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 312, 2104 )
+
+[node name="AudioStreamPlayer" parent="Star2" index="2"]
+stream = ExtResource( 7 )
 
 [node name="Star3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 114, 2748 )
 script = ExtResource( 4 )
 next_scene_path = "res://Space3.tscn"
 
+[node name="AudioStreamPlayer" parent="Star3" index="2"]
+stream = ExtResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = 5.522
+autoplay = true
+
 [connection signal="area_entered" from="Star3" to="Star3" method="_on_Star3_area_entered"]
+
+[editable path="Star"]
+[editable path="Star2"]
+[editable path="Star3"]

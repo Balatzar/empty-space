@@ -1,4 +1,4 @@
-extends Area2D
+extends "res://Star.gd"
 
 export(String, FILE, "*.tscn") var next_scene_path
 

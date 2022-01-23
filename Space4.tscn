@@ -1,3 +1,54 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/music/end - 22:01:2022 11.52.wav" type="AudioStream" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 
 [node name="Space4" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 181.0
+margin_top = 1328.0
+margin_right = 260.0
+margin_bottom = 1342.0
+text = "Well Played!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 117.0
+margin_top = 2624.0
+margin_right = 326.0
+margin_bottom = 2638.0
+text = "Game Made By Balthazar Aubard"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 145.0
+margin_top = 3224.0
+margin_right = 354.0
+margin_bottom = 3238.0
+text = "Art by ansimuz"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 71.0
+margin_top = 6623.0
+margin_right = 280.0
+margin_bottom = 6637.0
+text = "There's nothing left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 196, 405 )
+falling_speed = 300
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true

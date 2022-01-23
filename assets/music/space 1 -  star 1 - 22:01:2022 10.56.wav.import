@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/space 1 -  star 1 - 22:01:2022 10.56.wav-83f5383f3d4063dd3b81787419a36ebd.sample"
+
+[deps]
+
+source_file="res://assets/music/space 1 -  star 1 - 22:01:2022 10.56.wav"
+dest_files=[ "res://.import/space 1 -  star 1 - 22:01:2022 10.56.wav-83f5383f3d4063dd3b81787419a36ebd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

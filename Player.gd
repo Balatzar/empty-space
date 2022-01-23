@@ -26,5 +26,6 @@ func get_direction() -> Vector2:
 
 
 func _on_Player_area_entered(area: Area2D) -> void:
+	area.play_sound()
 	area.set_deferred("visible", false)
 
